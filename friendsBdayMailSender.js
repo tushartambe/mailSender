@@ -38,7 +38,11 @@ const mailInfo = {
   from: 'Tushar Tambe <tusharst30999@gmail.com>',
   to: findBday(friendsData).toString(),
   subject: 'Testing mail.Please ignore!!',
-  text: 'This is for testing purpose. kindly ignore this mail.'
+  text: 'This is for testing purpose. kindly ignore this mail.',
+  attachments: {
+    filename: 'somefile.png',
+    path: 'https://www.google.co.in/search?q=hello&rlz=1C5CHFA_enIN812IN812&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiEveng5oLfAhWLqY8KHRyPCK0Q_AUIESgE&biw=1440&bih=749#imgrc=AXnrXJ9gozrXfM'
+  }
 };
 
 authorInfo.sendMail(mailInfo, function(error, info){
